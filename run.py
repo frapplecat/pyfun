@@ -1,6 +1,7 @@
 import random
 from words import word_list
 
+
 def get_word():
     """
     Function that returns a word for the hangman game
