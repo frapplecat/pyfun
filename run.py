@@ -1,6 +1,35 @@
 import random
 from words import word_list
 
+def intro():
+    """
+    Welcome intro to Hangman game
+    """
+    print(f"""
+
+██╗  ██╗ █████╗ ███╗   ██╗ ██████╗ ███╗   ███╗ █████╗ ███╗   ██╗
+██║  ██║██╔══██╗████╗  ██║██╔════╝ ████╗ ████║██╔══██╗████╗  ██║
+███████║███████║██╔██╗ ██║██║  ███╗██╔████╔██║███████║██╔██╗ ██║
+██╔══██║██╔══██║██║╚██╗██║██║   ██║██║╚██╔╝██║██╔══██║██║╚██╗██║
+██║  ██║██║  ██║██║ ╚████║╚██████╔╝██║ ╚═╝ ██║██║  ██║██║ ╚████║
+╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝ ╚═════╝ ╚═╝     ╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝
+\n""")
+    username = " "
+    while True:
+        username = input("Welcome! Please enter your name: \n")
+
+        if username.isalnum() is not True:
+            print("Error: Letters and numbers only.")
+            continue
+        else:
+            print(f"Hi {username}, You have 6 guesses to guess the word.")
+            input("When you are ready to play, hit the enter key to begin")
+            return username
+
+    print(f"Hi {username}, You have 6 guesses to guess the word.")
+    input("When you are ready to play, hit the enter key to begin")
+    return username
+
 
 def get_word():
     """
@@ -144,6 +173,8 @@ def main():
     """
     Main game function
     """
+    username = intro()
+
     word = get_word()
     play(word)
     while input("Play Again? (Y/N) ").upper() == "Y":
