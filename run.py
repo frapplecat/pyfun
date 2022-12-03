@@ -1,3 +1,6 @@
+"""
+Import random library for random word selection from word_list
+"""
 import random
 from words import word_list
 
