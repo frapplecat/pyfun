@@ -5,11 +5,23 @@ import random
 from words import word_list
 
 
+def prGreen(skk):
+    print("\033[92m {}\033[00m" .format(skk))
+
+
+def prRed(skk):
+    print("\033[91m {}\033[00m" .format(skk))
+
+
+def prYellow(skk):
+    print("\033[93m {}\033[00m" .format(skk))
+
+
 def intro():
     """
     Welcome intro to Hangman game
     """
-    print("""
+    prYellow("""
 
 ██╗  ██╗ █████╗ ███╗   ██╗ ██████╗ ███╗   ███╗ █████╗ ███╗   ██╗
 ██║  ██║██╔══██╗████╗  ██║██╔════╝ ████╗ ████║██╔══██╗████╗  ██║
@@ -91,7 +103,7 @@ def play(word):
         print("\n")
     if guessed:
         print("Congrats, you guessed the word! You win!")
-        print("""
+        prGreen("""
 ░▒█░░▒█░▒█▀▀▀█░▒█░▒█░░░▒█░░▒█░▀█▀░▒█▄░▒█
 ░▒▀▄▄▄▀░▒█░░▒█░▒█░▒█░░░▒█▒█▒█░▒█░░▒█▒█▒█
 ░░░▒█░░░▒█▄▄▄█░░▀▄▄▀░░░▒▀▄▀▄▀░▄█▄░▒█░░▀█
@@ -99,7 +111,7 @@ def play(word):
 
     else:
         print("Sorry, out of tries. The word was " + word + ".")
-        print("""
+        prRed("""
 ░▒█░░▒█░▒█▀▀▀█░▒█░▒█░░░▒█░░░░▒█▀▀▀█░▒█▀▀▀█░▒█▀▀▀
 ░▒▀▄▄▄▀░▒█░░▒█░▒█░▒█░░░▒█░░░░▒█░░▒█░░▀▀▀▄▄░▒█▀▀▀
 ░░░▒█░░░▒█▄▄▄█░░▀▄▄▀░░░▒█▄▄█░▒█▄▄▄█░▒█▄▄▄█░▒█▄▄▄
