@@ -5,15 +5,24 @@ import random
 from words import word_list
 
 
-def prGreen(skk):
+def pr_green(skk):
+    """
+    Defines green color for output in terminal
+    """
     print("\033[92m {}\033[00m" .format(skk))
 
 
-def prRed(skk):
+def pr_red(skk):
+    """
+    Defines red color for output in terminal
+    """
     print("\033[91m {}\033[00m" .format(skk))
 
 
-def prYellow(skk):
+def pr_yellow(skk):
+    """
+    Defines yellow color for output in terminal
+    """
     print("\033[93m {}\033[00m" .format(skk))
 
 
@@ -21,7 +30,7 @@ def intro():
     """
     Welcome intro to Hangman game
     """
-    prYellow("""
+    pr_yellow("""
 
 ██╗  ██╗ █████╗ ███╗   ██╗ ██████╗ ███╗   ███╗ █████╗ ███╗   ██╗
 ██║  ██║██╔══██╗████╗  ██║██╔════╝ ████╗ ████║██╔══██╗████╗  ██║
@@ -103,7 +112,7 @@ def play(word):
         print("\n")
     if guessed:
         print("Congrats, you guessed the word! You win!")
-        prGreen("""
+        pr_green("""
 ░▒█░░▒█░▒█▀▀▀█░▒█░▒█░░░▒█░░▒█░▀█▀░▒█▄░▒█
 ░▒▀▄▄▄▀░▒█░░▒█░▒█░▒█░░░▒█▒█▒█░▒█░░▒█▒█▒█
 ░░░▒█░░░▒█▄▄▄█░░▀▄▄▀░░░▒▀▄▀▄▀░▄█▄░▒█░░▀█
@@ -111,7 +120,7 @@ def play(word):
 
     else:
         print("Sorry, out of tries. The word was " + word + ".")
-        prRed("""
+        pr_red("""
 ░▒█░░▒█░▒█▀▀▀█░▒█░▒█░░░▒█░░░░▒█▀▀▀█░▒█▀▀▀█░▒█▀▀▀
 ░▒▀▄▄▄▀░▒█░░▒█░▒█░▒█░░░▒█░░░░▒█░░▒█░░▀▀▀▄▄░▒█▀▀▀
 ░░░▒█░░░▒█▄▄▄█░░▀▄▄▀░░░▒█▄▄█░▒█▄▄▄█░▒█▄▄▄█░▒█▄▄▄
