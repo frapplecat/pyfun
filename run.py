@@ -1,6 +1,7 @@
 import random
 from words import word_list
 
+
 def intro():
     """
     Welcome intro to Hangman game
@@ -87,8 +88,19 @@ def play(word):
         print("\n")
     if guessed:
         print("Congrats, you guessed the word! You win!")
+        print(f"""
+░▒█░░▒█░▒█▀▀▀█░▒█░▒█░░░▒█░░▒█░▀█▀░▒█▄░▒█
+░▒▀▄▄▄▀░▒█░░▒█░▒█░▒█░░░▒█▒█▒█░▒█░░▒█▒█▒█
+░░░▒█░░░▒█▄▄▄█░░▀▄▄▀░░░▒▀▄▀▄▀░▄█▄░▒█░░▀█
+\n""")
+
     else:
         print("Sorry, out of tries. The word was " + word + ".")
+        print(f"""
+░▒█░░▒█░▒█▀▀▀█░▒█░▒█░░░▒█░░░░▒█▀▀▀█░▒█▀▀▀█░▒█▀▀▀
+░▒▀▄▄▄▀░▒█░░▒█░▒█░▒█░░░▒█░░░░▒█░░▒█░░▀▀▀▄▄░▒█▀▀▀
+░░░▒█░░░▒█▄▄▄█░░▀▄▄▀░░░▒█▄▄█░▒█▄▄▄█░▒█▄▄▄█░▒█▄▄▄
+\n""")
 
 
 def display_hangman(tries):
@@ -99,71 +111,92 @@ def display_hangman(tries):
                 """
                    --------
                    |      |
+                   |      |
                    |      O
-                   |     /|\
+                   |     /|\ 
                    |      |
                    |     / \ 
-                   -
+                   |
+                   |
+                   --------
                 """,
                 # head, torso, both arms, and one leg
                 """
                    --------
                    |      |
+                   |      |
                    |      O
-                   |     /|\
+                   |     /|\ 
                    |      |
                    |     / 
-                   -
+                   |
+                   |
+                   --------
                 """,
                 # head, torso, and both arms
                 """
                    --------
                    |      |
-                   |      O
-                   |     /|\
                    |      |
-                   |      
-                   -
+                   |      O
+                   |     /|\ 
+                   |      |
+                   |
+                   |
+                   |   
+                   --------
                 """,
                 # head, torso, and one arm
                 """
                    --------
                    |      |
+                   |      |
                    |      O
                    |     /|
                    |      |
-                   |     
-                   -
+                   |
+                   |
+                   |  
+                   --------
                 """,
                 # head and torso
                 """
                    --------
                    |      |
+                   |      |
                    |      O
                    |      |
                    |      |
-                   |     
-                   -
+                   |
+                   |
+                   | 
+                   --------
                 """,
                 # head
                 """
                    --------
                    |      |
+                   |      |
                    |      O
                    |    
                    |      
-                   |     
-                   -
+                   |
+                   |
+                   |
+                   --------
                 """,
                 # initial empty state
                 """
                    --------
                    |      |
-                   |      
+                   |      |
                    |
                    |
                    |
-                   -
+                   |
+                   |
+                   |
+                   --------
                 """
     ]
     return stages[tries]
@@ -173,7 +206,7 @@ def main():
     """
     Main game function
     """
-    username = intro()
+    intro()
 
     word = get_word()
     play(word)
