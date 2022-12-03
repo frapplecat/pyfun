@@ -41,7 +41,7 @@ def intro():
 """)
     username = " "
     while True:
-        username = input("Welcome! Please enter your name: \n")
+        username = input("Welcome! To begin please enter your name: \n")
 
         if username.isalnum() is not True:
             print("Error: Letters and numbers only.")
@@ -74,7 +74,7 @@ def play(word):
     guessed_words = []
     tries = 6
     print("Let's play Hangman!")
-    print(display_hangman(tries))
+    pr_yellow(display_hangman(tries))
     print("\n")
     while not guessed and tries > 0:
         guess = input("Please guess a letter or word: ").upper()
@@ -107,7 +107,7 @@ def play(word):
                 word_completion = word
         else:
             print("Not a valid guess")
-        print(display_hangman(tries))
+        pr_yellow(display_hangman(tries))
         print(word_completion)
         print("\n")
     if guessed:
@@ -139,7 +139,7 @@ def display_hangman(tries):
                    |      O
                    |     /|\\
                    |      |
-                   |
+                   |     / \\
                    |
                    |
                    --------
