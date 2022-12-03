@@ -6,7 +6,7 @@ def intro():
     """
     Welcome intro to Hangman game
     """
-    print(f"""
+    print("""
 
 ██╗  ██╗ █████╗ ███╗   ██╗ ██████╗ ███╗   ███╗ █████╗ ███╗   ██╗
 ██║  ██║██╔══██╗████╗  ██║██╔════╝ ████╗ ████║██╔══██╗████╗  ██║
@@ -14,7 +14,7 @@ def intro():
 ██╔══██║██╔══██║██║╚██╗██║██║   ██║██║╚██╔╝██║██╔══██║██║╚██╗██║
 ██║  ██║██║  ██║██║ ╚████║╚██████╔╝██║ ╚═╝ ██║██║  ██║██║ ╚████║
 ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝ ╚═════╝ ╚═╝     ╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝
-\n""")
+""")
     username = " "
     while True:
         username = input("Welcome! Please enter your name: \n")
@@ -88,19 +88,19 @@ def play(word):
         print("\n")
     if guessed:
         print("Congrats, you guessed the word! You win!")
-        print(f"""
+        print("""
 ░▒█░░▒█░▒█▀▀▀█░▒█░▒█░░░▒█░░▒█░▀█▀░▒█▄░▒█
 ░▒▀▄▄▄▀░▒█░░▒█░▒█░▒█░░░▒█▒█▒█░▒█░░▒█▒█▒█
 ░░░▒█░░░▒█▄▄▄█░░▀▄▄▀░░░▒▀▄▀▄▀░▄█▄░▒█░░▀█
-\n""")
+""")
 
     else:
         print("Sorry, out of tries. The word was " + word + ".")
-        print(f"""
+        print("""
 ░▒█░░▒█░▒█▀▀▀█░▒█░▒█░░░▒█░░░░▒█▀▀▀█░▒█▀▀▀█░▒█▀▀▀
 ░▒▀▄▄▄▀░▒█░░▒█░▒█░▒█░░░▒█░░░░▒█░░▒█░░▀▀▀▄▄░▒█▀▀▀
 ░░░▒█░░░▒█▄▄▄█░░▀▄▄▀░░░▒█▄▄█░▒█▄▄▄█░▒█▄▄▄█░▒█▄▄▄
-\n""")
+""")
 
 
 def display_hangman(tries):
@@ -113,9 +113,9 @@ def display_hangman(tries):
                    |      |
                    |      |
                    |      O
-                   |     /|\ 
+                   |     /|\\
                    |      |
-                   |     / \ 
+                   |
                    |
                    |
                    --------
@@ -126,9 +126,9 @@ def display_hangman(tries):
                    |      |
                    |      |
                    |      O
-                   |     /|\ 
+                   |     /|\\
                    |      |
-                   |     / 
+                   |     /
                    |
                    |
                    --------
@@ -139,11 +139,11 @@ def display_hangman(tries):
                    |      |
                    |      |
                    |      O
-                   |     /|\ 
+                   |     /|\\
                    |      |
                    |
                    |
-                   |   
+                   |
                    --------
                 """,
                 # head, torso, and one arm
@@ -156,7 +156,7 @@ def display_hangman(tries):
                    |      |
                    |
                    |
-                   |  
+                   |
                    --------
                 """,
                 # head and torso
@@ -169,7 +169,7 @@ def display_hangman(tries):
                    |      |
                    |
                    |
-                   | 
+                   |
                    --------
                 """,
                 # head
@@ -178,8 +178,8 @@ def display_hangman(tries):
                    |      |
                    |      |
                    |      O
-                   |    
-                   |      
+                   |
+                   |
                    |
                    |
                    |
@@ -215,5 +215,5 @@ def main():
         play(word)
 
 
-if __name__ == "__main__":
-    main()
+# if __name__ == "__main__":
+main()
