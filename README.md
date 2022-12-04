@@ -35,22 +35,9 @@ drawing is displayed.
 <br>
 <br>
 
-# **GAME OVERVIEW**
-
-![hangman game overview1 gif](readmeimages/songbirb-overview1.gif)
-![hangman game overview2 gif](readmeimages/songbirb-overview2.gif)
-
-XXX
-
-<br>
-<br>
-<br>
-
 # **INTRO SCREEN**
 
-![hangman introscreen](#.gif)
-
-XXX
+![hangman introscreen](readme-images/pyfun-hangman-intro-screen.png)
 
 <br>
 <br>
@@ -58,7 +45,7 @@ XXX
 
 # **WIN AND RELOAD**
 
-![hangman winreload gif](#.gif)
+![hangman winreload gif](readme-images/pyfun-hangman-youwin.png)
 
 I hope that the user will want to play multiple times so on WIN a congratulations message will
 pop-up with the option to try again.
@@ -69,7 +56,7 @@ pop-up with the option to try again.
 
 # **LOSE AND RELOAD**
 
-![losereload gif](readmeimages/songbirb-lose-game.gif)
+![hangman losereload gif](readme-images/pyfun-hangman-youlose.png)
 
 I hope that the user will want to play multiple times so on LOSE a message with the answer will
 print with the option to try again.
@@ -194,10 +181,22 @@ print with the option to try again.
 
 * The site was deployed on Heroku<br>
 
-* Create Heroku App
-* Set the buildbacks to python and NodeJS
-* Link Heroku app to the repository
-* Deploy manually
+* Open Heroku account.
+* From the Heroku dashboard click the “Create new app” button.
+* Name the app, the name has to be unique.
+* Select region and click “Create app”. 
+* Click on the settings tab.  
+* Click “Add buildpack” here.
+* Select Python then click “Save changes”.
+* Select node.js and click “Save” again.
+* Buildpacks must be in this order, with Python on top and node.js underneath.
+* Go to the deploy section.  
+* Select Github and confirm that we want to connect to Github.  
+* Search for the Github repository name and once found click “connect”  
+* Choose to manually deploy using the deploy branch option.  
+* After creation you get an “App was successfully deployed” message  
+with a button to take us to our deployed link. 
+
 
 <br>
 <br>
