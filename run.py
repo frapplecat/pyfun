@@ -42,20 +42,27 @@ def intro():
 """)
     username = " "
     while True:
-        pr_yellow("{:*^80}".format("Welcome!"))
-        username = input("{: ^80}".format("Please enter your name: \n"))
+        pr_yellow("{:+^79}".format("Welcome!"))
+        print("\n")
+        print("{: ^79}".format("Please enter your name below"))
+        print("\n")
+        username = input(" " * 37)
 
         if username.isalnum() is not True:
-            print("{: ^80}".format("Error: Letters and numbers only."))
+            pr_red("{: ^79}".format("Error: Letters and numbers only."))
+            print("\n")
             continue
         else:
-            print("{: ^80}".format(f"Hi {username},"))
-            print("{: ^80}".format("You have 6 guesses to guess the word."))
-            input("{: ^80}".format("Hit the enter key to begin"))
+            print("\n")
+            print("{: ^79}".format(f"Hi {username},"))
+            print("{: ^79}".format("You have 6 guesses to guess the word."))
+            input(" " * 25 + "Hit the enter key to begin")
             return username
 
-    print(f"Hi {username}, You have 6 guesses to guess the word.")
-    input("When you are ready to play, hit the enter key to begin")
+    print("\n")
+    print("{: ^79}".format(f"Hi {username},"))
+    print("{: ^79}".format("You have 6 guesses to guess the word."))
+    input(" " * 25 + "Hit the enter key to begin")
     return username
 
 
@@ -76,20 +83,24 @@ def play(word):
     guessed_letters = []
     guessed_words = []
     tries = 6
-    print("Let's play Hangman!")
+    print("\n")
+    pr_green("{:+^79}".format("Let's play Hangman!"))
     pr_yellow(display_hangman(tries))
     print("\n")
     while not guessed and tries > 0:
-        guess = input("Please guess a letter or word: ").upper()
+        guess = input(" " * 25 + "Please guess a letter or word: ").upper()
         if len(guess) == 1 and guess.isalpha():
             if guess in guessed_letters:
-                print("You've already guessed this letter", guess)
+                print("\n")
+                pr_red("{: ^79}".format("You've already guessed " + guess))
             elif guess not in word:
-                print(guess, "is not in the word.")
+                print("\n")
+                pr_red("{: ^79}".format(guess + " is not in the word."))
                 tries -= 1
                 guessed_letters.append(guess)
             else:
-                print("Good job,", guess, "is in the word!")
+                print("\n")
+                pr_green("{: ^79}".format("Cool, " + guess + " is right!"))
                 guessed_letters.append(guess)
                 word_as_list = list(word_completion)
                 inds = [i for i, letter in enumerate(word) if letter == guess]
@@ -100,33 +111,33 @@ def play(word):
                     guessed = True
         elif len(guess) == len(word) and guess.isalpha():
             if guess in guessed_words:
-                print("You already guessed the word", guess)
+                pr_red("You already guessed the word" + guess)
             elif guess != word:
-                print(guess, "is not the word.")
+                pr_red(guess + "is not the word.")
                 tries -= 1
                 guessed_words.append(guess)
             else:
                 guessed = True
                 word_completion = word
         else:
-            print("Not a valid guess")
+            pr_red("{: ^79}".format("Not a valid guess"))
         pr_yellow(display_hangman(tries))
         print(word_completion)
         print("\n")
     if guessed:
-        print("Congrats, you guessed the word! You win!")
+        pr_green("{: ^79}".format("Excellent, you guessed the word!"))
         pr_green("""
-░▒█░░▒█░▒█▀▀▀█░▒█░▒█░░░▒█░░▒█░▀█▀░▒█▄░▒█
-░▒▀▄▄▄▀░▒█░░▒█░▒█░▒█░░░▒█▒█▒█░▒█░░▒█▒█▒█
-░░░▒█░░░▒█▄▄▄█░░▀▄▄▀░░░▒▀▄▀▄▀░▄█▄░▒█░░▀█
+                ░▒█░░▒█░▒█▀▀▀█░▒█░▒█░░░▒█░░▒█░▀█▀░▒█▄░▒█
+                ░▒▀▄▄▄▀░▒█░░▒█░▒█░▒█░░░▒█▒█▒█░▒█░░▒█▒█▒█
+                ░░░▒█░░░▒█▄▄▄█░░▀▄▄▀░░░▒▀▄▀▄▀░▄█▄░▒█░░▀█
 """)
 
     else:
-        print("Sorry, out of tries. The word was " + word + ".")
+        pr_red("{: ^79}".format("Unlucky. The word was " + word + "."))
         pr_red("""
-░▒█░░▒█░▒█▀▀▀█░▒█░▒█░░░▒█░░░░▒█▀▀▀█░▒█▀▀▀█░▒█▀▀▀
-░▒▀▄▄▄▀░▒█░░▒█░▒█░▒█░░░▒█░░░░▒█░░▒█░░▀▀▀▄▄░▒█▀▀▀
-░░░▒█░░░▒█▄▄▄█░░▀▄▄▀░░░▒█▄▄█░▒█▄▄▄█░▒█▄▄▄█░▒█▄▄▄
+                ░▒█░░▒█░▒█▀▀▀█░▒█░▒█░░░▒█░░░░▒█▀▀▀█░▒█▀▀▀█░▒█▀▀▀
+                ░▒▀▄▄▄▀░▒█░░▒█░▒█░▒█░░░▒█░░░░▒█░░▒█░░▀▀▀▄▄░▒█▀▀▀
+                ░░░▒█░░░▒█▄▄▄█░░▀▄▄▀░░░▒█▄▄█░▒█▄▄▄█░▒█▄▄▄█░▒█▄▄▄
 """)
 
 
@@ -237,7 +248,7 @@ def main():
 
     word = get_word()
     play(word)
-    while input("Play Again? (Y/N) ").upper() == "Y":
+    while input(" " * 30 + "Play Again? (Y/N) ").upper() == "Y":
         word = get_word()
         play(word)
 
