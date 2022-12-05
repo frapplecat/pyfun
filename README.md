@@ -127,14 +127,6 @@ print with the option to try again.
 <br>
 <br>
 
-# **MOBILE RESPONSIVENESS**
-![mobile responsiveness1](readmeimages/songbirb-mobile-responsiveness1.gif)
-![mobile responsiveness2](readmeimages/songbirb-mobile-responsiveness2.gif)
-
-<br>
-<br>
-<br>
-
 # **VALIDATION**
 **CI Python Linter**
 
