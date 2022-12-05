@@ -3,13 +3,14 @@ Import random library for random word selection from word_list
 """
 import random
 from words import word_list
+# pylint: disable=consider-using-f-string
 
 
 def pr_green(skk):
     """
     Defines green color for output in terminal
     """
-    print("\033[92m {}\033[00m" .format(skk))
+    print("\033[92m {}\033[00m".format(skk))
 
 
 def pr_red(skk):
@@ -32,23 +33,25 @@ def intro():
     """
     pr_yellow("""
 
-██╗  ██╗ █████╗ ███╗   ██╗ ██████╗ ███╗   ███╗ █████╗ ███╗   ██╗
-██║  ██║██╔══██╗████╗  ██║██╔════╝ ████╗ ████║██╔══██╗████╗  ██║
-███████║███████║██╔██╗ ██║██║  ███╗██╔████╔██║███████║██╔██╗ ██║
-██╔══██║██╔══██║██║╚██╗██║██║   ██║██║╚██╔╝██║██╔══██║██║╚██╗██║
-██║  ██║██║  ██║██║ ╚████║╚██████╔╝██║ ╚═╝ ██║██║  ██║██║ ╚████║
-╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝ ╚═════╝ ╚═╝     ╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝
+        ██╗  ██╗ █████╗ ███╗   ██╗ ██████╗ ███╗   ███╗ █████╗ ███╗   ██╗
+        ██║  ██║██╔══██╗████╗  ██║██╔════╝ ████╗ ████║██╔══██╗████╗  ██║
+        ███████║███████║██╔██╗ ██║██║  ███╗██╔████╔██║███████║██╔██╗ ██║
+        ██╔══██║██╔══██║██║╚██╗██║██║   ██║██║╚██╔╝██║██╔══██║██║╚██╗██║
+        ██║  ██║██║  ██║██║ ╚████║╚██████╔╝██║ ╚═╝ ██║██║  ██║██║ ╚████║
+        ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝ ╚═════╝ ╚═╝     ╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝
 """)
     username = " "
     while True:
-        username = input("Welcome! To begin please enter your name: \n")
+        pr_yellow("{:*^80}".format("Welcome!"))
+        username = input("{: ^80}".format("Please enter your name: \n"))
 
         if username.isalnum() is not True:
-            print("Error: Letters and numbers only.")
+            print("{: ^80}".format("Error: Letters and numbers only."))
             continue
         else:
-            print(f"Hi {username}, You have 6 guesses to guess the word.")
-            input("When you are ready to play, hit the enter key to begin")
+            print("{: ^80}".format(f"Hi {username},"))
+            print("{: ^80}".format("You have 6 guesses to guess the word."))
+            input("{: ^80}".format("Hit the enter key to begin"))
             return username
 
     print(f"Hi {username}, You have 6 guesses to guess the word.")
@@ -89,8 +92,8 @@ def play(word):
                 print("Good job,", guess, "is in the word!")
                 guessed_letters.append(guess)
                 word_as_list = list(word_completion)
-                indices = [i for i, letter in enumerate(word) if letter == guess]
-                for index in indices:
+                inds = [i for i, letter in enumerate(word) if letter == guess]
+                for index in inds:
                     word_as_list[index] = guess
                 word_completion = "".join(word_as_list)
                 if "_" not in word_completion:

@@ -91,7 +91,7 @@ print with the option to try again.
 * **Am I Responsive** - to display the website on a range of devices
 * **Texteditor.com** - for ASCII text art
 * **Google Dev Tools** - for troubleshooting and testing fixes
-* **PEP8** - to test Python code
+* **CI Python Linter** - to test Python code https://pep8ci.herokuapp.com/
 * **Slack, Stackoverflow, Youtube, Google, W3C Schools** - for help with troubleshooting errors
 * **Coolors.co** - to check colour contrast
 * **W3C Spell Checker** - to check website spelling
@@ -127,9 +127,9 @@ print with the option to try again.
 <br>
 
 # **VALIDATION**
-**PEP8**
+**CI Python Linter**
 
-![PEP8 validation](#)
+![CI Python Linter validation](#)
 
 <br>
 <br>
