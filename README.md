@@ -22,6 +22,15 @@ drawing is displayed.
 <br>
 <br>
 
+# **LOGIC CHART**
+
+![pyfun hangman logic chart](readme-images/pyfun-hangman-logic.png)
+
+<br>
+<br>
+<br>
+
+
 # **USER STORIES**
 
 **Visitor Goals**
