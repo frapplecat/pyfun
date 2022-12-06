@@ -122,14 +122,14 @@ def play(word):
         else:
             pr_red("{: ^79}".format("Not a valid guess"))
         pr_yellow(display_hangman(tries))
-        print(word_completion)
+        print("{: ^79}".format(word_completion))
         print("\n")
     if guessed:
         pr_green("{: ^79}".format("Excellent, you guessed the word!"))
         pr_green("""
-                ░▒█░░▒█░▒█▀▀▀█░▒█░▒█░░░▒█░░▒█░▀█▀░▒█▄░▒█
-                ░▒▀▄▄▄▀░▒█░░▒█░▒█░▒█░░░▒█▒█▒█░▒█░░▒█▒█▒█
-                ░░░▒█░░░▒█▄▄▄█░░▀▄▄▀░░░▒▀▄▀▄▀░▄█▄░▒█░░▀█
+                    ░▒█░░▒█░▒█▀▀▀█░▒█░▒█░░░▒█░░▒█░▀█▀░▒█▄░▒█
+                    ░▒▀▄▄▄▀░▒█░░▒█░▒█░▒█░░░▒█▒█▒█░▒█░░▒█▒█▒█
+                    ░░░▒█░░░▒█▄▄▄█░░▀▄▄▀░░░▒▀▄▀▄▀░▄█▄░▒█░░▀█
 """)
 
     else:
