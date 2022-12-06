@@ -251,7 +251,9 @@ print with the option to try again.
 
 # **DEPLOYMENT**
 
-![deployment gif](#.gif)
+![deployment gif1](readme-images/pyfun-hangman-herokudeployment1.gif)
+![deployment gif2](readme-images/pyfun-hangman-herokudeployment2.gif)
+![deployment gif3](readme-images/pyfun-hangman-herokudeployment3.gif)
 
 * The site was deployed on Heroku<br>
 
