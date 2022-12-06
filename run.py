@@ -56,13 +56,13 @@ def intro():
             print("\n")
             print("{: ^79}".format(f"Hi {username},"))
             print("{: ^79}".format("You have 6 guesses to guess the word."))
-            input(" " * 25 + "Hit the enter key to begin")
+            input(" " * 25 + "Hit the enter key to begin \n\n")
             return username
 
     print("\n")
     print("{: ^79}".format(f"Hi {username},"))
     print("{: ^79}".format("You have 6 guesses to guess the word."))
-    input(" " * 25 + "Hit the enter key to begin")
+    input(" " * 25 + "Hit the enter key to begin \n\n")
     return username
 
 
@@ -85,6 +85,7 @@ def play(word):
     tries = 6
     print("\n")
     pr_green("{:+^79}".format("Let's play Hangman!"))
+    print("\n")
     pr_yellow(display_hangman(tries))
     print("\n")
     while not guessed and tries > 0:
@@ -120,6 +121,7 @@ def play(word):
                 guessed = True
                 word_completion = word
         else:
+            print("\n")
             pr_red("{: ^79}".format("Not a valid guess"))
         pr_yellow(display_hangman(tries))
         print("{: ^79}".format(word_completion))
@@ -253,5 +255,4 @@ def main():
         play(word)
 
 
-# if __name__ == "__main__":
 main()

@@ -6,6 +6,33 @@
 
 **TABLE OF CONTENTS**
 
+- [**ABOUT PYFUN HANGMAN**](#about-pyfun-hangman)
+- [**LOGIC CHART**](#logic-chart)
+- [**USER STORIES**](#user-stories)
+- [**INTRO SCREEN**](#intro-screen)
+- [**ENTER NAME**](#enter-name)
+- [**LET'S PLAY HANGMAN**](#let-s-play-hangman)
+- [**INCORRECT GUESS**](#incorrect-guess)
+- [**ALREADY GUESSED**](#already-guessed)
+- [**INVALID GUESS**](#invalid-guess)
+- [**CORRECT GUESS**](#correct-guess)
+- [**WIN AND RELOAD**](#win-and-reload)
+- [**LOSE AND RELOAD**](#lose-and-reload)
+- [**FUTURE FEATURES**](#future-features)
+- [**LANGUAGES USED**](#languages-used)
+- [**RESOURCES**](#resources)
+- [**MANUAL TESTING**](#manual-testing)
+- [**AM I RESPONSIVE**](#am-i-responsive)
+- [**VALIDATION**](#validation)
+- [**BUGS**](#bugs)
+- [**KNOWN ISSUES**](#known-issues)
+- [**DEPLOYMENT**](#deployment)
+- [**HOW TO FORK**](#how-to-fork)
+- [**HOW TO CLONE**](#how-to-clone)
+- [**VERSION CONTROL**](#version-control)
+- [**CREDITS**](#credits)
+- [**ACKNOWLEDGEMENTS**](#--acknowledgements)
+
 <br>
 <br>
 <br>
@@ -47,6 +74,54 @@ drawing is displayed.
 # **INTRO SCREEN**
 
 ![hangman introscreen](readme-images/pyfun-hangman-intro-screen.png)
+
+<br>
+<br>
+<br>
+
+# **ENTER NAME**
+
+![hangman enter name](readme-images/pyfun-hangman-enter-name.png)
+
+<br>
+<br>
+<br>
+
+# **LET'S PLAY HANGMAN**
+
+![let's play hangman](readme-images/pyfun-hangman-letsplay.png)
+
+<br>
+<br>
+<br>
+
+# **INCORRECT GUESS**
+
+![hangman incorrect guess](readme-images/pyfun-hangman-incorrectguess.png)
+
+<br>
+<br>
+<br>
+
+# **ALREADY GUESSED**
+
+![hangman already guessed](readme-images/pyfun-hangman-alreadyguessed.png)
+
+<br>
+<br>
+<br>
+
+# **INVALID GUESS**
+
+![hangman invalid guess](readme-images/pyfun-hangman-notavalidguess.png)
+
+<br>
+<br>
+<br>
+
+# **CORRECT GUESS**
+
+![hangman correct guess](readme-images/pyfun-hangman-correctguess.png)
 
 <br>
 <br>
@@ -100,7 +175,7 @@ print with the option to try again.
 * **Am I Responsive** - to display the website on a range of devices
 * **Texteditor.com** - for ASCII text art
 * **Google Dev Tools** - for troubleshooting and testing fixes
-* **CI Python Linter** - to test Python code https://pep8ci.herokuapp.com/
+* **CI Python Linter** - to test Python code
 * **Slack, Stackoverflow, Youtube, Google, W3C Schools** - for help with troubleshooting errors
 * **Coolors.co** - to check colour contrast
 * **W3C Spell Checker** - to check website spelling
@@ -114,14 +189,15 @@ print with the option to try again.
 <br>
 
 # **MANUAL TESTING**
-* I manually tested the game, I checked win, lose, play again and quit stages.
+* I manually tested the game. I checked win, lose, play again and quit stages.
+* I tested incorrect, invalid, duplicate and correct guesses.
 
 <br>
 <br>
 <br>
 
 # **AM I RESPONSIVE**
-![am i responsive](#)
+![am i responsive](readme-images/pyfun-hangman-amiresponsive.png)
 
 <br>
 <br>
@@ -130,19 +206,16 @@ print with the option to try again.
 # **VALIDATION**
 **CI Python Linter**
 
-![CI Python Linter validation](#)
+![CI Python Linter validation](readme-images/pyfun-hangman-ci-pyhton-linter.png)
 
 <br>
 <br>
 <br>
 
-**Lighthouse**
+**PageSpeed Insights**
 
-![lighthouse1](readmeimages/lighthouse.png)
-![lighthouse2](readmeimages/lighthouse-performance.png)
-![lighthouse3](readmeimages/lighthouse-access.png)
-![lighthouse4](readmeimages/lighthouse-bp.png)
-![lighthouse5](readmeimages/lighthouse-seo.png)
+![pagespeed insight mobile](readme-images/pyfun-hangman-pagespeedinsights-mobile.png)
+![pagespeed insight desktop](readme-images/pyfun-hangman-pagespeedinsights-desktop.png)
 
 <br>
 <br>
@@ -170,7 +243,7 @@ print with the option to try again.
 
 # **KNOWN ISSUES**
 
-* None so far
+* 
 
 <br>
 <br>
@@ -254,57 +327,3 @@ I used GITPOD for version control software. Regular git add ., git commit -m, an
 # **ACKNOWLEDGEMENTS**
 
 * Thanks as always to my Code Institute Mentor, Mitko Backvarov, for his support and encouragement.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
-
-Welcome frapplecat,
-
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **August 17, 2021**
-
-## Reminders
-
-* Your code must be placed in the `run.py` file
-* Your dependencies must be placed in the `requirements.txt` file
-* Do not edit any of the other files or your code may not deploy properly
-
-## Creating the Heroku app
-
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
-
-1. `heroku/python`
-2. `heroku/nodejs`
-
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
-
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
-
-Connect your GitHub repository and deploy as normal.
-
-## Constraints
-
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
-
------
-Happy coding!
