@@ -97,7 +97,7 @@ drawing is displayed.
 
 # **INCORRECT GUESS**
 
-![hangman incorrect guess](readme-images/pyfun-hangman-incorrectguess.png)
+![hangman incorrect guess](readme-images/pyfun-hangman-incorrect-guess.png)
 
 <br>
 <br>
@@ -105,7 +105,7 @@ drawing is displayed.
 
 # **ALREADY GUESSED**
 
-![hangman already guessed](readme-images/pyfun-hangman-alreadyguessed.png)
+![hangman already guessed](readme-images/pyfun-hangman-already-guessed.png)
 
 <br>
 <br>
@@ -113,7 +113,7 @@ drawing is displayed.
 
 # **INVALID GUESS**
 
-![hangman invalid guess](readme-images/pyfun-hangman-notavalidguess.png)
+![hangman invalid guess](readme-images/pyfun-hangman-not-a-valid-guess.png)
 
 <br>
 <br>
@@ -121,7 +121,7 @@ drawing is displayed.
 
 # **CORRECT GUESS**
 
-![hangman correct guess](readme-images/pyfun-hangman-correctguess.png)
+![hangman correct guess](readme-images/pyfun-hangman-correct-guess.png)
 
 <br>
 <br>
@@ -129,7 +129,7 @@ drawing is displayed.
 
 # **WIN AND RELOAD**
 
-![hangman winreload gif](readme-images/pyfun-hangman-youwin.png)
+![hangman winreload gif](readme-images/pyfun-hangman-you-win.png)
 
 I hope that the user will want to play multiple times so on WIN a congratulations message will
 pop-up with the option to try again.
@@ -140,7 +140,7 @@ pop-up with the option to try again.
 
 # **LOSE AND RELOAD**
 
-![hangman losereload gif](readme-images/pyfun-hangman-youlose.png)
+![hangman losereload gif](readme-images/pyfun-hangman-you-lose.png)
 
 I hope that the user will want to play multiple times so on LOSE a message with the answer will
 print with the option to try again.
@@ -293,14 +293,22 @@ with a button to take us to our deployed link.
 
 # **HOW TO FORK**
 
-![how to fork 1](readme-images/pyfun-hangman-howtofork1.png)
 * Login/signup to GitHub.
-![how to fork 2](readme-images/pyfun-hangman-howtofork2.png)
+
+![how to fork 1](readme-images/pyfun-hangman-how-to-fork1.png)
+![how to fork 2](readme-images/pyfun-hangman-how-to-fork2.png)
+
 * Locate the relevant repository, for example: https://github.com/frapplecat/pyfun
-![how to fork 3](readme-images/pyfun-hangman-howtofork3.pngg)
+
+![how to fork 3](readme-images/pyfun-hangman-how-to-fork3.png)
+
 * Click on the 'Fork' button in the top right corner.
-![how to fork 4](readme-images/pyfun-hangman-howtofork4.png)
+
+![how to fork 4](readme-images/pyfun-hangman-how-to-fork4.png)
+
 * The forked version of this repo will be generated.
+
+
 
 <br>
 <br>
