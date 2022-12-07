@@ -293,9 +293,13 @@ with a button to take us to our deployed link.
 
 # **HOW TO FORK**
 
+![how to fork 1](readme-images/pyfun-hangman-howtofork1.png)
 * Login/signup to GitHub.
+![how to fork 2](readme-images/pyfun-hangman-howtofork2.png)
 * Locate the relevant repository, for example: https://github.com/frapplecat/pyfun
+![how to fork 3](readme-images/pyfun-hangman-howtofork3.pngg)
 * Click on the 'Fork' button in the top right corner.
+![how to fork 4](readme-images/pyfun-hangman-howtofork4.png)
 * The forked version of this repo will be generated.
 
 <br>
