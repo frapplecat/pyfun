@@ -78,7 +78,7 @@ def play(word):
     """
     Displays the word for the game during each turn
     """
-    word_completion = "_" * len(word)
+    word_completion = "?" * len(word)
     guessed = False
     guessed_letters = []
     guessed_words = []
@@ -108,7 +108,7 @@ def play(word):
                 for index in inds:
                     word_as_list[index] = guess
                 word_completion = "".join(word_as_list)
-                if "_" not in word_completion:
+                if "?" not in word_completion:
                     guessed = True
         elif len(guess) == len(word) and guess.isalpha():
             if guess in guessed_words:

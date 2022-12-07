@@ -1,4 +1,4 @@
-![pyfun hangman heading](#)
+![pyfun hangman heading](readme-images/pyfun-hangman-heading.png)
 
 <br>
 <br>
@@ -153,6 +153,7 @@ print with the option to try again.
 
 * Add difficulty level option
 * Add a scoring system and keep track of high scores
+* Maybe add various language versions
 
 <br>
 <br>
@@ -230,10 +231,24 @@ print with the option to try again.
 
 ---
 
-* **Expected** - when.
-* **Testing** - I ran the game using terminal. 
-* **Result** - once.
-* **Fix** - I.
+* **Expected** - when loaded the game display would be easy to read and navigate.
+* **Testing** - I deployed the game to Heroku. 
+* **Result** - once loaded the left aligned text seemed too close to edge of the window.
+* **Fix** - I changed the code so the text content was centered in the window.
+
+---
+
+* **Expected** - when progressing through the game each section would be easy to follow.
+* **Testing** - I deployed the game to Heroku. 
+* **Result** - once loaded some of the sections seemed a bit cramped, new lines appearing directly underneath the preceding lines.
+* **Fix** - I changed the code to add line spaces between the sections of the game to spread them out an making it easier on the eye.
+
+---
+
+* **Expected** - that the underscores used for the hangman guess-word would have a slight gap between them so it's obvious how many letters are in the word to be guessed.
+* **Testing** - I deployed the game to Terminal where it looked ok and then deployed to Heroku. 
+* **Result** - in Heroku the underscores merged into one line so it was hard to tell how many letters were in the guess word.
+* **Fix** - I tried a few fixes but settled on changing from underscores to a question mark.
 
 ---
 
@@ -242,8 +257,6 @@ print with the option to try again.
 <br>
 
 # **KNOWN ISSUES**
-
-* 
 
 <br>
 <br>
@@ -279,8 +292,6 @@ with a button to take us to our deployed link.
 <br>
 
 # **HOW TO FORK**
-
-![how to fork gif](readmeimages/howtofork.gif)
 
 * Login/signup to GitHub.
 * Locate the relevant repository, for example: https://github.com/frapplecat/pyfun
