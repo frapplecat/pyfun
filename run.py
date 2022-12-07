@@ -42,27 +42,54 @@ def intro():
 """)
     username = " "
     while True:
-        pr_yellow("{:+^79}".format("Welcome!"))
+        pr_yellow("{:+^79}".format("I hope you brought a thesaurus!"))
         print("\n")
         print("{: ^79}".format("Please enter your name below"))
         print("\n")
         username = input(" " * 37)
+        print("\n" * 10)
 
         if username.isalnum() is not True:
             pr_red("{: ^79}".format("Error: Letters and numbers only."))
             print("\n")
             continue
         else:
+            pr_green("""
+        ♥♥     ♥♥ ♥♥♥♥♥♥♥ ♥♥       ♥♥♥♥♥♥  ♥♥♥♥♥♥  ♥♥♥    ♥♥♥ ♥♥♥♥♥♥♥ ♥♥
+        ♥♥     ♥♥ ♥♥      ♥♥      ♥♥      ♥♥    ♥♥ ♥♥♥♥  ♥♥♥♥ ♥♥      ♥♥
+        ♥♥  ♥  ♥♥ ♥♥♥♥♥   ♥♥      ♥♥      ♥♥    ♥♥ ♥♥ ♥♥♥♥ ♥♥ ♥♥♥♥♥   ♥♥
+        ♥♥ ♥♥♥ ♥♥ ♥♥      ♥♥      ♥♥      ♥♥    ♥♥ ♥♥  ♥♥  ♥♥ ♥♥
+         ♥♥♥ ♥♥♥  ♥♥♥♥♥♥♥ ♥♥♥♥♥♥♥  ♥♥♥♥♥♥  ♥♥♥♥♥♥  ♥♥      ♥♥ ♥♥♥♥♥♥♥ ♥♥
+            """)
             print("\n")
-            print("{: ^79}".format(f"Hi {username},"))
-            print("{: ^79}".format("You have 6 guesses to guess the word."))
-            input(" " * 25 + "Hit the enter key to begin \n\n")
+            print("{: ^79}".format(f"Hi {username}."))
+            print("\n")
+            print("{: ^79}".format("Try to guess the word."))
+            print("{: ^79}".format("Each error adds a line to the gallows"))
+            print("{: ^79}".format("You have 6 incorrect guesses before..."))
+            print("{: ^79}".format("it's TOO LATE!"))
+            pr_green("{: ^79}".format("Wishing you the best of luck!"))
+            print("\n")
+            input(" " * 25 + "Hit the enter key to begin \n \n")
             return username
 
+    pr_green("""
+        ♥♥     ♥♥ ♥♥♥♥♥♥♥ ♥♥       ♥♥♥♥♥♥  ♥♥♥♥♥♥  ♥♥♥    ♥♥♥ ♥♥♥♥♥♥♥ ♥♥
+        ♥♥     ♥♥ ♥♥      ♥♥      ♥♥      ♥♥    ♥♥ ♥♥♥♥  ♥♥♥♥ ♥♥      ♥♥
+        ♥♥  ♥  ♥♥ ♥♥♥♥♥   ♥♥      ♥♥      ♥♥    ♥♥ ♥♥ ♥♥♥♥ ♥♥ ♥♥♥♥♥   ♥♥
+        ♥♥ ♥♥♥ ♥♥ ♥♥      ♥♥      ♥♥      ♥♥    ♥♥ ♥♥  ♥♥  ♥♥ ♥♥
+         ♥♥♥ ♥♥♥  ♥♥♥♥♥♥♥ ♥♥♥♥♥♥♥  ♥♥♥♥♥♥  ♥♥♥♥♥♥  ♥♥      ♥♥ ♥♥♥♥♥♥♥ ♥♥
+            """)
     print("\n")
-    print("{: ^79}".format(f"Hi {username},"))
-    print("{: ^79}".format("You have 6 guesses to guess the word."))
-    input(" " * 25 + "Hit the enter key to begin \n\n")
+    print("{: ^79}".format(f"Hi {username}."))
+    print("\n")
+    print("{: ^79}".format("Try to guess the word."))
+    print("{: ^79}".format("Each error adds a line to the gallows"))
+    print("{: ^79}".format("You have 6 incorrect guesses before..."))
+    print("{: ^79}".format("it's TOO LATE!"))
+    pr_green("{: ^79}".format("Wishing you the best of luck!"))
+    print("\n")
+    input(" " * 25 + "Hit the enter key to begin \n \n")
     return username
 
 
@@ -83,7 +110,15 @@ def play(word):
     guessed_letters = []
     guessed_words = []
     tries = 6
-    print("\n")
+    print("\n" * 15)
+    pr_red("""
+                    ██████╗ ███████╗ █████╗ ██████╗ ██╗   ██╗██████╗
+                    ██╔══██╗██╔════╝██╔══██╗██╔══██╗╚██╗ ██╔╝╚════██╗
+                    ██████╔╝█████╗  ███████║██║  ██║ ╚████╔╝   ▄███╔╝
+                    ██╔══██╗██╔══╝  ██╔══██║██║  ██║  ╚██╔╝    ▀▀══╝
+                    ██║  ██║███████╗██║  ██║██████╔╝   ██║     ██╗
+                    ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚═════╝    ╚═╝     ╚═╝
+            """)
     pr_green("{:+^79}".format("Let's play Hangman!"))
     print("\n")
     pr_yellow(display_hangman(tries))

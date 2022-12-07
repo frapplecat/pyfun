@@ -42,7 +42,7 @@
 This project is based on the classic pencil and paper game Hangman.
 The user must guess the full word before hangman is hung. This is done by guessing a letter in the word.
 If the guess is correct, it is placed in the blank spaces that make up the word but if the guess is incorrect the user loses a try and a section of the hangman is created. The word must be guessed before the user runs out of tries and the full hangman
-drawing is displayed. 
+drawing is displayed. The deloyed site can be found **[here](https://pyfun-hangman.herokuapp.com/)**.
 
 
 <br>
@@ -197,26 +197,10 @@ print with the option to try again.
 <br>
 <br>
 
-# **AM I RESPONSIVE**
-![am i responsive](readme-images/pyfun-hangman-amiresponsive.png)
-
-<br>
-<br>
-<br>
-
 # **VALIDATION**
 **CI Python Linter**
 
 ![CI Python Linter validation](readme-images/pyfun-hangman-ci-pyhton-linter.png)
-
-<br>
-<br>
-<br>
-
-**PageSpeed Insights**
-
-![pagespeed insight mobile](readme-images/pyfun-hangman-pagespeedinsights-mobile.png)
-![pagespeed insight desktop](readme-images/pyfun-hangman-pagespeedinsights-desktop.png)
 
 <br>
 <br>
