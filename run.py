@@ -302,9 +302,22 @@ def main():
 
     word = get_word()
     play(word)
-    while input(" " * 30 + "Play Again? (Y/N) ").upper() == "Y":
-        word = get_word()
-        play(word)
+    while True:
+        if input(" " * 30 + "Play Again? (Y/N) ").upper() == "Y":
+            word = get_word()
+            play(word)
+        else:
+            clear_screen()
+            pr_green("{: ^79}".format("See you again hopefully! \n"))
+            pr_green("""
+             ██████╗  ██████╗  ██████╗ ██████╗ ██████╗ ██╗   ██╗███████╗
+            ██╔════╝ ██╔═══██╗██╔═══██╗██╔══██╗██╔══██╗╚██╗ ██╔╝██╔════╝
+            ██║  ███╗██║   ██║██║   ██║██║  ██║██████╔╝ ╚████╔╝ █████╗
+            ██║   ██║██║   ██║██║   ██║██║  ██║██╔══██╗  ╚██╔╝  ██╔══╝
+            ╚██████╔╝╚██████╔╝╚██████╔╝██████╔╝██████╔╝   ██║   ███████╗
+             ╚═════╝  ╚═════╝  ╚═════╝ ╚═════╝ ╚═════╝    ╚═╝   ╚══════╝
+""")
+            break
 
 
 main()
