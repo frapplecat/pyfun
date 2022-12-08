@@ -18,6 +18,7 @@
 - [**CORRECT GUESS**](#correct-guess)
 - [**WIN AND RELOAD**](#win-and-reload)
 - [**LOSE AND RELOAD**](#lose-and-reload)
+- [**END GAME AND GOODBYE**](#end-game-and-goodbye)
 - [**FUTURE FEATURES**](#future-features)
 - [**LANGUAGES USED**](#languages-used)
 - [**RESOURCES**](#resources)
@@ -63,7 +64,8 @@ drawing is displayed. The deloyed site can be found **[here](https://pyfun-hangm
 **Visitor Goals**
 
 * I want to be able to play the game quickly
-* I want to understand how ot play the game
+* I want to understand how to play the game
+* I want a user friendly interface
 * I want to be able to play the game as many times as I like
 
 
@@ -149,11 +151,19 @@ print with the option to try again.
 <br>
 <br>
 
+# **END GAME AND GOODBYE**
+
+![hangman end game and goodbye gif](#.png)
+
+<br>
+<br>
+<br>
+
 # **FUTURE FEATURES**
 
 * Add difficulty level option
 * Add a scoring system and keep track of high scores
-* Maybe add various language versions
+* Add a different language version
 
 <br>
 <br>
@@ -190,8 +200,56 @@ print with the option to try again.
 <br>
 
 # **MANUAL TESTING**
-* I manually tested the game. I checked win, lose, play again and quit stages.
-* I tested incorrect, invalid, duplicate and correct guesses.
+I manually tested the game constantly during it's creation using the gitpod terminal.
+I checked enter name, rules, win, lose, play again and quit stages. I tested incorrect, invalid, duplicate and correct guesses.
+I checked the various inputs worked as expected. I tested the Y/N replay game section.
+
+Once I was happy with the game was functioning as I'd hoped I deployed to Herouku.
+
+I started testing using the same methods as outlined above in the deployed app and noticed some elements that didn't work as well
+as when viewed in the gitpod terminal.
+
+The left alignmment in gitpod terminal seemed perfectly viable to me from a user point of 
+view but looked cramped when I tried using the deployed version and felt in impacted negatively on the 
+user experience.
+
+![Heroku left align issue1](readme-images/pyfun-hangman-left-align-issue1.png)<br>
+![Heroku left align issue2](readme-images/pyfun-hangman-left-align-issue2.png)<br>
+![Heroku left align issue3](readme-images/pyfun-hangman-left-align-issue3.png)
+
+I decided to change the alignment to a more centered layout as I felt that led to a better user experience.
+
+Similarly the underscores I'd used for the guess-word looked ok in gitpod terminal, having a little separation
+between the underscores, but once deployed in Heroku the underscores appeared as a single line which also impacted the 
+user experience as it was hard to tell the word length. I tried a few variants such as increasing the space between the underscores 
+but eventually decided to replace the underscores with question marks.
+
+![Heroku underscore issue](readme-images/pyfun-hangman-underscore-issue.png)
+
+I noticed other user experience issues more in the deloyed app than during the intial testing in gitpod terminal.
+So I reworked the code, adding more color areas, extra spaces and clear terminal functions to make playing the 
+game, to my eyes at least, a more pleasant experience and less cluttered than the first deployments.
+
+
+|**FEATURE**|**EXPECTED**|**ACTION**|**RESULT**|
+|:---|:---|:---|:---|
+| Intro | To display on load | Run game | As expected |
+| Enter Name | To appear underneath title | Input alphanumeric name, hit enter | As expected |
+| Welcome Heading | To display after clear screen from enter name | None needed | As expected |
+| Welcome text and rules | To display message using username input | None needed | As expected |
+| Begin Game | To display below rules | Hit enter to begin game | As expected |
+| Ready? message | To display after clear screen from previous input | None needed | As expected |
+| Let's play Hangman | To display first stage of game below Ready? heading | None needed | As expected |
+| Guess correct | To display green message saying guess is correct, replaces ? with letter, adds letter to guessed list | User must input a letter guess | As expected |
+| Guess incorrect | To display red message saying guess is not in the word, adds letter to guessed list | User must input a letter guess | As expected |
+| Guess invalid | To display red message saying guess is not valid, prompt to enter letter or word | User has input an invalid letter guess e.g too many letters or a number | As expected |
+| Guessed already | To display red message saying already guessed using info from guessed list and a prompt to enter a letter | User has input letter already guessed | As expected |
+| Hangman graphic | With each failed guess a section of the graphic is added to the screen | User inputs a letter guess with each attempt | As expected |
+| Win | If the user guesses the word before the graphic is complete a You Win message is printed alongside a play or quit question | User to input Y + enter to play again or just hit Enter to quit | As expected |
+| Lose | If the user uses all attempts and fails to guess the word before the graphic is complete a You Lose message is printed alongside a play again prompt | User to input Y + enter to play again or just hit Enter to quit | As expected |
+| Play Again? Y | If Y + Enter is used the game returns to the Ready? screen and the first hangman graphic. A new word has been randomly selected.  | User requested to input Y + Enter | As expected |
+| Quit? | If Y is not input and Enter used it will end the game | User requested to hit Enter| As expected |
+
 
 <br>
 <br>
@@ -241,7 +299,7 @@ print with the option to try again.
 <br>
 
 # **KNOWN ISSUES**
-
+No known issues
 <br>
 <br>
 <br>
@@ -318,7 +376,7 @@ with a button to take us to our deployed link.
 
 # **VERSION CONTROL**
 
-I used GITPOD for version control software. Regular git add ., git commit -m, and git push were used to add, save and push the code to the GITHUB Reop where the source code is stored.
+I used GITPOD for version control software. Regular git add ., git commit -m, and git push were used to add, save and push the code to the GITHUB Repo where the source code is stored.
 
 <br>
 <br>
@@ -328,7 +386,7 @@ I used GITPOD for version control software. Regular git add ., git commit -m, an
 
 * I watched many youtube tutorials on hangman games but in particular **[Kiteco](https://www.youtube.com/watch?v=m4nEnsavl6w)**
 * For adding color to the terminal I referenced an article on **[Geeks for Geeks](https://www.geeksforgeeks.org/print-colors-python-terminal/)**
-* For clear the terminal screen I referenced **[101 Computing](https://www.101computing.net/python-typing-text-effect/)**
+* For clear the terminal screen function I referenced **[101 Computing](https://www.101computing.net/python-typing-text-effect/)**
 
 <br>
 <br>
@@ -336,4 +394,4 @@ I used GITPOD for version control software. Regular git add ., git commit -m, an
 
 # **ACKNOWLEDGEMENTS**
 
-* Thanks as always to my Code Institute Mentor, Mitko Backvarov, for his support and encouragement.
+* Thanks as always to my Code Institute Mentor, Mitko Backvarov, for his support, advice and encouragement.

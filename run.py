@@ -170,9 +170,11 @@ def play(word):
                     guessed = True
         elif len(guess) == len(word) and guess.isalpha():
             if guess in guessed_words:
-                pr_red("You already guessed the word" + guess)
+                print("\n")
+                pr_red("{: ^79}".format("You've already guessed " + guess))
             elif guess != word:
-                pr_red(guess + "is not the word.")
+                print("\n")
+                pr_red("{: ^79}".format(guess + " is not the word."))
                 tries -= 1
                 guessed_words.append(guess)
             else:
@@ -310,7 +312,7 @@ def main():
     word = get_word()
     play(word)
     while True:
-        if input(" " * 30 + "Play Again? (Y/N) ").upper() == "Y":
+        if input(" " * 22 + "Play = Y + Enter. Quit = Enter ").upper() == "Y":
             word = get_word()
             play(word)
         else:
