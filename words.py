@@ -1,3 +1,6 @@
+"""
+List of words for import in game
+"""
 word_list = [
     'wares',
     'soup',
