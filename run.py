@@ -3,7 +3,7 @@ Libraries and imports
 """
 import os   # To use to clear screen function
 import random  # Import random library for random word selection from word_list
-from words import word_list
+from words import word_list  # Imports words from word list in words.py
 # pylint: disable=consider-using-f-string
 
 
@@ -37,7 +37,9 @@ def clear_screen():
 
 def intro():
     """
-    Welcome intro to Hangman game
+    Intro Screen to Hangman game.
+    Get user name.
+    Welcome message and rules explainer.
     """
     pr_green("""
 
@@ -120,7 +122,11 @@ def get_word():
 
 def play(word):
     """
-    Displays the word for the game during each turn
+    Generates the randomly selected word for the game during each turn.
+    Error messages for incorrect or invalid entries.
+    Tracks letters used and will give error message if letter is reused.
+    Tracks number of attempts left.
+    Win or Lose message depending on outcome.
     """
     word_completion = "?" * len(word)
     guessed = False
@@ -296,7 +302,8 @@ def display_hangman(tries):
 
 def main():
     """
-    Main game function
+    Main game function.
+    Includes play again or end game loop.
     """
     intro()
 
