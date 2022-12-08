@@ -1,7 +1,8 @@
 """
-Import random library for random word selection from word_list
+Libraries and imports
 """
-import random
+import os   # To use to clear screen function
+import random  # Import random library for random word selection from word_list
 from words import word_list
 # pylint: disable=consider-using-f-string
 
@@ -27,6 +28,13 @@ def pr_yellow(skk):
     print("\033[93m {}\033[00m" .format(skk))
 
 
+def clear_screen():
+    """
+    Used to clear Terminal screen
+    """
+    os.system("clear")
+
+
 def intro():
     """
     Welcome intro to Hangman game
@@ -47,7 +55,7 @@ def intro():
         print("{: ^79}".format("Please enter your name below"))
         print("\n")
         username = input(" " * 37)
-        print("\n" * 10)
+        clear_screen()
 
         if username.isalnum() is not True:
             pr_red("{: ^79}".format("Error: Letters and numbers only."))
@@ -110,7 +118,7 @@ def play(word):
     guessed_letters = []
     guessed_words = []
     tries = 6
-    print("\n" * 15)
+    clear_screen()
     pr_red("""
                     ██████╗ ███████╗ █████╗ ██████╗ ██╗   ██╗██████╗
                     ██╔══██╗██╔════╝██╔══██╗██╔══██╗╚██╗ ██╔╝╚════██╗

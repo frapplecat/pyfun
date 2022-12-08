@@ -328,6 +328,7 @@ I used GITPOD for version control software. Regular git add ., git commit -m, an
 
 * I watched many youtube tutorials on hangman games but in particular **[Kiteco](https://www.youtube.com/watch?v=m4nEnsavl6w)**
 * For adding color to the terminal I referenced an article on **[Geeks for Geeks](https://www.geeksforgeeks.org/print-colors-python-terminal/)**
+* For clear the terminal screen I referenced **[101 Computing](https://www.101computing.net/python-typing-text-effect/)**
 
 <br>
 <br>
