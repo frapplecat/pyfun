@@ -143,7 +143,6 @@ def play(word):
                     ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚═════╝    ╚═╝     ╚═╝
             """)
     pr_green("{:+^79}".format("Let's play Hangman!"))
-    print("\n")
     pr_yellow(display_hangman(tries))
     print("\n")
     while not guessed and tries > 0:
