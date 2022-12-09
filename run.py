@@ -63,7 +63,7 @@ def intro():
     while True:
         pr_yellow("{:+^79}".format("I hope you brought a thesaurus!"))
         print("\n")
-        print("{: ^79}".format("Please enter your name below"))
+        print("{: ^79}".format("Please type your name below and hit enter"))
         print("\n")
         username = input(" " * 37)
         clear_screen()
@@ -87,9 +87,10 @@ def intro():
             print("{: ^79}".format("Each error adds a line to the gallows"))
             print("{: ^79}".format("You have 6 incorrect guesses before..."))
             print("{: ^79}".format("it's TOO LATE!"))
+            print("\n")
             pr_green("{: ^79}".format("Wishing you the best of luck!"))
             print("\n")
-            input(" " * 25 + "Hit the enter key to begin \n \n")
+            input(" " * 27 + "Hit the enter key to begin \n \n")
             return username
 
     pr_green("""
