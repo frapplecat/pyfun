@@ -317,6 +317,7 @@ def main():
             play(word)
         else:
             clear_screen()
+            print("\n" * 5)
             pr_green("{: ^79}".format("See you again hopefully! \n"))
             pr_green("""
              ██████╗  ██████╗  ██████╗ ██████╗ ██████╗ ██╗   ██╗███████╗
