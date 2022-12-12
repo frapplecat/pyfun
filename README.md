@@ -1,4 +1,4 @@
-![pyfun hangman heading](readme-images/pyfun-hangman-heading.png)
+![pyfun hangman heading](readme-images/pyfunhangman-heading.png)
 
 <br>
 <br>
@@ -11,11 +11,15 @@
 - [**USER STORIES**](#user-stories)
 - [**INTRO SCREEN**](#intro-screen)
 - [**ENTER NAME**](#enter-name)
-- [**LET'S PLAY HANGMAN**](#let-s-play-hangman)
-- [**INCORRECT GUESS**](#incorrect-guess)
-- [**ALREADY GUESSED**](#already-guessed)
-- [**INVALID GUESS**](#invalid-guess)
-- [**CORRECT GUESS**](#correct-guess)
+- [**WELCOME SCREEN AND RULES**](#welcome-screen-and-rules)
+- [**LET'S PLAY HANGMAN**](#lets-play-hangman)
+- [**INCORRECT GUESS LETTER**](#incorrect-guess-letter)
+- [**ALREADY GUESSED LETTER**](#already-guessed-letter)
+- [**INVALID GUESS LETTER**](#invalid-guess-letter)
+- [**CORRECT GUESS LETTER**](#correct-guess-letter)
+- [**INCORRECT GUESS WORD**](#incorrect-guess-word)
+- [**ALREADY GUESSED WORD**](#already-guessed-word)
+- [**CORRECT GUESS WORD**](#correct-guess-word)
 - [**WIN AND RELOAD**](#win-and-reload)
 - [**LOSE AND RELOAD**](#lose-and-reload)
 - [**END GAME AND GOODBYE**](#end-game-and-goodbye)
@@ -23,7 +27,6 @@
 - [**LANGUAGES USED**](#languages-used)
 - [**RESOURCES**](#resources)
 - [**MANUAL TESTING**](#manual-testing)
-- [**AM I RESPONSIVE**](#am-i-responsive)
 - [**VALIDATION**](#validation)
 - [**BUGS**](#bugs)
 - [**KNOWN ISSUES**](#known-issues)
@@ -32,7 +35,7 @@
 - [**HOW TO CLONE**](#how-to-clone)
 - [**VERSION CONTROL**](#version-control)
 - [**CREDITS**](#credits)
-- [**ACKNOWLEDGEMENTS**](#--acknowledgements)
+- [**ACKNOWLEDGEMENTS**](#acknowledgements)
 
 <br>
 <br>
@@ -42,8 +45,7 @@
 
 This project is based on the classic pencil and paper game Hangman.
 The user must guess the full word before hangman is hung. This is done by guessing a letter in the word.
-If the guess is correct, it is placed in the blank spaces that make up the word but if the guess is incorrect the user loses a try and a section of the hangman is created. The word must be guessed before the user runs out of tries and the full hangman
-drawing is displayed. The deloyed site can be found **[here](https://pyfun-hangman.herokuapp.com/)**.
+If the guess is correct it is placed into position in the line of question marks below the hangman graphic but if the guess is incorrect the user loses a try and a section of the hangman is created. The word must be guessed before the user runs out of tries and the full hangman drawing is displayed. The deloyed site can be found **[here](https://pyfun-hangman.herokuapp.com/)**.
 
 
 <br>
@@ -52,7 +54,7 @@ drawing is displayed. The deloyed site can be found **[here](https://pyfun-hangm
 
 # **LOGIC CHART**
 
-![pyfun hangman logic chart](readme-images/pyfun-hangman-logic.png)
+![pyfun hangman logic chart](readme-images/pyfunhangman-logic.png)
 
 <br>
 <br>
@@ -75,7 +77,10 @@ drawing is displayed. The deloyed site can be found **[here](https://pyfun-hangm
 
 # **INTRO SCREEN**
 
-![hangman introscreen](readme-images/pyfun-hangman-intro-screen.png)
+![hangman introscreen](readme-images/pyfunhangman-intro-screen.png)
+
+*  Some ASCII text displays for the game title intro
+
 
 <br>
 <br>
@@ -83,7 +88,19 @@ drawing is displayed. The deloyed site can be found **[here](https://pyfun-hangm
 
 # **ENTER NAME**
 
-![hangman enter name](readme-images/pyfun-hangman-enter-name.png)
+![hangman enter name](readme-images/pyfunhangman-enter-name.png)
+
+* A prompt to enter your name and hit enter
+
+<br>
+<br>
+<br>
+
+# **WELCOME SCREEN AND RULES**
+
+![hangman welcome](readme-images/pyfunhangman-welcome-rules.png)
+
+* A welcome message using the enter name info and a quick outline of the rules. Click Enter to begin.
 
 <br>
 <br>
@@ -91,39 +108,85 @@ drawing is displayed. The deloyed site can be found **[here](https://pyfun-hangm
 
 # **LET'S PLAY HANGMAN**
 
-![let's play hangman](readme-images/pyfun-hangman-letsplay.png)
+![let's play hangman](readme-images/pyfunhangman-ready-lets-play.png)
+
+* Let's Play! Enter a letter or word guess.
+
+
 
 <br>
 <br>
 <br>
 
-# **INCORRECT GUESS**
+# **INCORRECT GUESS LETTER**
 
-![hangman incorrect guess](readme-images/pyfun-hangman-incorrect-guess.png)
+![hangman incorrect guess](readme-images/pyfunhangman-incorrect-guess.png)
 
-<br>
-<br>
-<br>
-
-# **ALREADY GUESSED**
-
-![hangman already guessed](readme-images/pyfun-hangman-already-guessed.png)
+* If a letter guessed is not in the word then a red 'incorrect guess' message displays. The letter is added to the guessed list.
+One try is removed from the total number of attempts and a stage of the hangman graphic is added to the display.
 
 <br>
 <br>
 <br>
 
-# **INVALID GUESS**
+# **ALREADY GUESSED LETTER**
 
-![hangman invalid guess](readme-images/pyfun-hangman-not-a-valid-guess.png)
+![hangman already guessed](readme-images/pyfunhangman-already-guessed.png)
+
+* If a letter guessed has already been tried then a red 'already guessed' message displays.
 
 <br>
 <br>
 <br>
 
-# **CORRECT GUESS**
+# **INVALID GUESS LETTER**
 
-![hangman correct guess](readme-images/pyfun-hangman-correct-guess.png)
+![hangman invalid guess](readme-images/pyfunhangman-not-a-valid-guess.png)
+
+* If a user input is not in required format a red 'not a valid guess' message displays.
+
+
+<br>
+<br>
+<br>
+
+# **CORRECT GUESS LETTER**
+
+![hangman correct guess](readme-images/pyfunhangman-correct-guess.png)
+
+* If a letter guessed is correct then a green 'letter is correct' message displays. The letter is added to the guessed list.
+
+<br>
+<br>
+<br>
+
+# **INCORRECT GUESS WORD**
+
+![hangman incorrect guessed word](readme-images/pyfunhangman-incorrect-word-guess.png)
+
+* If a word guessed is not the word then a red 'incorrect guess' message displays. The word is added to the guessed list.
+One try is removed from the total number of attempts and a stage of the hangman graphic is added to the display.
+
+<br>
+<br>
+<br>
+
+# **ALREADY GUESSED WORD**
+
+![hangman already guessed word](readme-images/pyfunhangman-already-guessed-word.png)
+
+* If a word guessed has already been tried then a red 'already guessed' message displays.
+
+
+<br>
+<br>
+<br>
+
+# **CORRECT GUESS WORD**
+
+![hangman correct guess word](readme-images/pyfunhangman-correct-word-guess.png)
+
+* If a word guessed is correct then a green 'YOU WIN, you guessed the word' message displays.
 
 <br>
 <br>
@@ -131,9 +194,9 @@ drawing is displayed. The deloyed site can be found **[here](https://pyfun-hangm
 
 # **WIN AND RELOAD**
 
-![hangman winreload gif](readme-images/pyfun-hangman-you-win.png)
+![hangman winreload](readme-images/pyfunhangman-you-win.png)
 
-I hope that the user will want to play multiple times so on WIN a congratulations message will
+* I hope that the user will want to play multiple times so on WIN a congratulations message will
 pop-up with the option to try again.
 
 <br>
@@ -142,9 +205,9 @@ pop-up with the option to try again.
 
 # **LOSE AND RELOAD**
 
-![hangman losereload gif](readme-images/pyfun-hangman-you-lose.png)
+![hangman losereload](readme-images/pyfunhangman-you-lose.png)
 
-I hope that the user will want to play multiple times so on LOSE a message with the answer will
+* I hope that the user will want to play multiple times so on LOSE a message with the answer will
 print with the option to try again.
 
 <br>
@@ -153,7 +216,9 @@ print with the option to try again.
 
 # **END GAME AND GOODBYE**
 
-![hangman end game and goodbye gif](#.png)
+![hangman end game and goodbye](readme-images/pyfunhangman-goodbye.png)
+
+* If Quit is selected a Goodbye message appears in the display window.
 
 <br>
 <br>
@@ -183,13 +248,9 @@ print with the option to try again.
 * **Gitpod** - to create the website and version control
 * **Github** - to save and store the files for the website
 * **Adobe Illustrator** - to create the logo and various headings
-* **Am I Responsive** - to display the website on a range of devices
 * **Texteditor.com** - for ASCII text art
-* **Google Dev Tools** - for troubleshooting and testing fixes
 * **CI Python Linter** - to test Python code
 * **Slack, Stackoverflow, Youtube, Google, W3C Schools** - for help with troubleshooting errors
-* **Coolors.co** - to check colour contrast
-* **W3C Spell Checker** - to check website spelling
 * **Freeconvert.com** - to compress mp4
 * **Ezgif.com**- to convert compressed mp4 to gif for README
 * **Record It Pro** - for screen-capturing video and converting mp4 to gif
@@ -230,25 +291,29 @@ I noticed other user experience issues more in the deloyed app than during the i
 So I reworked the code, adding more color areas, extra spaces and clear terminal functions to make playing the 
 game, to my eyes at least, a more pleasant experience and less cluttered than the first deployments.
 
+<br>
 
-|**FEATURE**|**EXPECTED**|**ACTION**|**RESULT**|
-|:---|:---|:---|:---|
-| Intro | To display on load | Run game | As expected |
-| Enter Name | To appear underneath title | Input alphanumeric name, hit enter | As expected |
-| Welcome Heading | To display after clear screen from enter name | None needed | As expected |
-| Welcome text and rules | To display message using username input | None needed | As expected |
-| Begin Game | To display below rules | Hit enter to begin game | As expected |
-| Ready? message | To display after clear screen from previous input | None needed | As expected |
-| Let's play Hangman | To display first stage of game below Ready? heading | None needed | As expected |
-| Guess correct | To display green message saying guess is correct, replaces ? with letter, adds letter to guessed list | User must input a letter guess | As expected |
-| Guess incorrect | To display red message saying guess is not in the word, adds letter to guessed list | User must input a letter guess | As expected |
-| Guess invalid | To display red message saying guess is not valid, prompt to enter letter or word | User has input an invalid letter guess e.g too many letters or a number | As expected |
-| Guessed already | To display red message saying already guessed using info from guessed list and a prompt to enter a letter | User has input letter already guessed | As expected |
-| Hangman graphic | With each failed guess a section of the graphic is added to the screen | User inputs a letter guess with each attempt | As expected |
-| Win | If the user guesses the word before the graphic is complete a You Win message is printed alongside a play or quit question | User to input Y + enter to play again or just hit Enter to quit | As expected |
-| Lose | If the user uses all attempts and fails to guess the word before the graphic is complete a You Lose message is printed alongside a play again prompt | User to input Y + enter to play again or just hit Enter to quit | As expected |
-| Play Again? Y | If Y + Enter is used the game returns to the Ready? screen and the first hangman graphic. A new word has been randomly selected.  | User requested to input Y + Enter | As expected |
-| Quit? | If Y is not input and Enter used it will end the game | User requested to hit Enter| As expected |
+|**FEATURE**|**EXPECTED**|**ACTION**|**RESULT**|**SCREENSHOT**|
+|:---|:---|:---|:---|:---|
+| Intro | To display on load | Run game | As expected | ![Intro](readme-images/pyfunhangman-intro-crop.png)
+| Enter Name | To appear underneath title | Input alphanumeric name, hit enter | As expected | ![Enter Name](readme-images/pyfunhangman-enter-name-crop.png)
+| Welcome Heading | To display after clear screen from enter name | None needed | As expected | ![Welcome](readme-images/pyfunhangman-welcome-crop.png)
+| Welcome Text and Rules | To display message using username input | None needed | As expected | ![Welcome text and rules](readme-images/pyfunhangman-welcome-text-rules-crop.png)
+| Begin Game | To display below rules | Hit enter to begin game | As expected | ![Begin Game](readme-images/pyfunhangman-begin-game-crop.png)
+| Ready? | To display after clear screen from previous input | None needed | As expected | ![Ready](readme-images/pyfunhangman-ready-crop.png)
+| Let's Play Hangman | To display first stage of game below Ready? heading | None needed | As expected | ![Lets Play](readme-images/pyfunhangman-letsplay-crop.png)
+| Guess Correct | To display green message saying guess is correct, replaces ? with letter, adds letter to guessed list | User must input a letter guess | As expected | ![Correct Guess](readme-images/pyfunhangman-correct-guess-crop.png)
+| Guess Incorrect | To display red message saying guess is not in the word, adds letter to guessed list | User must input a letter guess | As expected |![Incorrect Guess Crop](readme-images/pyfunhangman-incorrect-guess-crop.png)
+| Guess Invalid | To display red message saying guess is not valid, prompt to enter letter or word | User has input an invalid letter guess e.g too many letters or a number | As expected |![Invalid Guess Crop](readme-images/pyfunhangman-not-a-valid-guess-crop.png)
+| Guessed Already | To display red message saying already guessed using info from guessed list and a prompt to enter a letter | User has input letter already guessed | As expected |![Already Guessed Crop](readme-images/pyfunhangman-already-guessed-letter-crop.png)
+| Word Guess Incorrect | To display red message if the word guessed was incorrect and a prompt to enter a letter or word | User has input incorrect word guess | As expected |![Incorrect Guessed Word Crop](readme-images/pyfunhangman-incorrect-word-guess-crop.png)
+| Word Guess Correct | To display green message if the word guessed was correct | User has input the correct word | As expected |![Correct Guessed Word Crop](readme-images/pyfunhangman-correct-word-guess-crop.png)
+| Word Guessed Already | To display red message saying already guessed this word using info from guessed word list and a prompt to enter a letter | User has input word already guessed | As expected |![Already Guessed Word Crop](readme-images/pyfunhangman-already-guessed-word-crop.png)
+| Hangman Graphic | With each failed guess a section of the graphic is added to the screen | User inputs a letter guess with each attempt | As expected | ![Hangman Graphic](readme-images/pyfunhangman-hangman-graphic-crop.png)
+| Win | If the user guesses the word before the graphic is complete a You Win message is printed alongside a play or quit question | User to input Y + enter to play again or just hit Enter to quit | As expected | ![Win](readme-images/pyfunhangman-youwin-crop.png)
+| Lose | If the user uses all attempts and fails to guess the word before the graphic is complete a You Lose message is printed alongside a play again prompt | User to input Y + enter to play again or just hit Enter to quit | As expected | ![Lose](readme-images/pyfunhangman-youlose-crop.png)
+| Play Again? Y | If Y + Enter is used the game returns to the Ready? screen and the first hangman graphic. A new word has been randomly selected.  | User requested to input Y + Enter | As expected | ![Play Again Crop](readme-images/pyfunhangman-play-or-quit-crop.png)
+| Quit? | If Y is not input and Enter used it will end the game with a Goodbye message | User requested to hit Enter| As expected | ![Quit](readme-images/pyfunhangman-goodbye-crop.png)
 
 
 <br>
