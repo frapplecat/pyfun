@@ -44,7 +44,7 @@
 # **ABOUT PYFUN HANGMAN**
 
 This project is based on the classic pencil and paper game Hangman.
-The user must guess the full word before hangman is hung. This is done by guessing a letter in the word.
+The user must guess the full word before the hangman is hung. This is done by guessing a letter in the word.
 If the guess is correct it is placed into position in the line of question marks below the hangman graphic but if the guess is incorrect the user loses a try and a section of the hangman is created. The word must be guessed before the user runs out of tries and the full hangman drawing is displayed. The deloyed site can be found **[here](https://pyfun-hangman.herokuapp.com/)**.
 
 
@@ -226,9 +226,9 @@ print with the option to try again.
 
 # **FUTURE FEATURES**
 
-* Add difficulty level option
-* Add a scoring system and keep track of high scores
-* Add a different language version
+* Add difficulty level option.
+* Add a scoring system and keep track of high scores.
+* Add a different language option.
 
 <br>
 <br>
@@ -263,9 +263,9 @@ print with the option to try again.
 # **MANUAL TESTING**
 I manually tested the game constantly during it's creation using the gitpod terminal.
 I checked enter name, rules, win, lose, play again and quit stages. I tested incorrect, invalid, duplicate and correct guesses.
-I checked the various inputs worked as expected. I tested the Y/N replay game section.
+I checked the various inputs worked as expected. I tested the Play again/Quit functionality.
 
-Once I was happy with the game was functioning as I'd hoped I deployed to Herouku.
+Once I was happy that the game was functioning as I'd hoped I deployed the game through Herouku.
 
 I started testing using the same methods as outlined above in the deployed app and noticed some elements that didn't work as well
 as when viewed in the gitpod terminal.
@@ -307,13 +307,13 @@ game, to my eyes at least, a more pleasant experience and less cluttered than th
 | Guess Invalid | To display red message saying guess is not valid, prompt to enter letter or word | User has input an invalid letter guess e.g too many letters or a number | As expected |![Invalid Guess Crop](readme-images/pyfunhangman-not-a-valid-guess-crop.png)
 | Guessed Already | To display red message saying already guessed using info from guessed list and a prompt to enter a letter | User has input letter already guessed | As expected |![Already Guessed Crop](readme-images/pyfunhangman-already-guessed-letter-crop.png)
 | Word Guess Incorrect | To display red message if the word guessed was incorrect and a prompt to enter a letter or word | User has input incorrect word guess | As expected |![Incorrect Guessed Word Crop](readme-images/pyfunhangman-incorrect-word-guess-crop.png)
-| Word Guess Correct | To display green message if the word guessed was correct | User has input the correct word | As expected |![Correct Guessed Word Crop](readme-images/pyfunhangman-correct-word-guess-crop.png)
+| Word Guess Correct | To display green message if the word guessed was correct. You Win! | User has input the correct word | As expected |![Correct Guessed Word Crop](readme-images/pyfunhangman-correct-word-guess-crop.png)
 | Word Guessed Already | To display red message saying already guessed this word using info from guessed word list and a prompt to enter a letter | User has input word already guessed | As expected |![Already Guessed Word Crop](readme-images/pyfunhangman-already-guessed-word-crop.png)
 | Hangman Graphic | With each failed guess a section of the graphic is added to the screen | User inputs a letter guess with each attempt | As expected | ![Hangman Graphic](readme-images/pyfunhangman-hangman-graphic-crop.png)
-| Win | If the user guesses the word before the graphic is complete a You Win message is printed alongside a play or quit question | User to input Y + enter to play again or just hit Enter to quit | As expected | ![Win](readme-images/pyfunhangman-youwin-crop.png)
-| Lose | If the user uses all attempts and fails to guess the word before the graphic is complete a You Lose message is printed alongside a play again prompt | User to input Y + enter to play again or just hit Enter to quit | As expected | ![Lose](readme-images/pyfunhangman-youlose-crop.png)
-| Play Again? Y | If Y + Enter is used the game returns to the Ready? screen and the first hangman graphic. A new word has been randomly selected.  | User requested to input Y + Enter | As expected | ![Play Again Crop](readme-images/pyfunhangman-play-or-quit-crop.png)
-| Quit? | If Y is not input and Enter used it will end the game with a Goodbye message | User requested to hit Enter| As expected | ![Quit](readme-images/pyfunhangman-goodbye-crop.png)
+| Win | If the user guesses the word before the graphic is complete a YOU WIN message is printed alongside a play or quit question | User to input Y + enter to play again or just hit Enter to quit | As expected | ![Win](readme-images/pyfunhangman-youwin-crop.png)
+| Lose | If the user uses all attempts and fails to guess the word before the graphic is complete a YOU LOSE message is printed alongside a play again prompt | User to input Y + enter to play again or just hit Enter to quit | As expected | ![Lose](readme-images/pyfunhangman-youlose-crop.png)
+| Play Again? | If Y + Enter is used the game returns to the Ready? screen and the first hangman graphic. A new word has been randomly selected.  | User requested to input Y + Enter | As expected | ![Play Again Crop](readme-images/pyfunhangman-play-or-quit-crop.png)
+| Quit? | If Y is not input and Enter used it will end the game with a Goodbye message | User has hit Enter| As expected | ![Quit](readme-images/pyfunhangman-goodbye-crop.png)
 
 
 <br>
@@ -349,7 +349,7 @@ game, to my eyes at least, a more pleasant experience and less cluttered than th
 * **Expected** - when progressing through the game each section would be easy to follow.
 * **Testing** - I deployed the game to Heroku. 
 * **Result** - once loaded some of the sections seemed a bit cramped, new lines appearing directly underneath the preceding lines.
-* **Fix** - I changed the code to add line spaces between the sections of the game to spread them out an making it easier on the eye.
+* **Fix** - I changed the code to add line spaces and a clear_screen() function where necessary to help the flow of the game and make it easier on the eye.
 
 ---
 
@@ -498,3 +498,4 @@ I used GITPOD for version control software. Regular git add ., git commit -m, an
 # **ACKNOWLEDGEMENTS**
 
 * Thanks as always to my Code Institute Mentor, Mitko Backvarov, for his support, advice and encouragement.
+* Thanks to CI tutor, Alex, for his help with merging branches in gitpod terminal.
