@@ -324,7 +324,7 @@ game, to my eyes at least, a more pleasant experience and less cluttered than th
 **CI Python Linter**
 
 ![CI Python Linter validation1](readme-images/pyfun-hangman-ci-python-linter1.png)
-![CI Python Linter validation2](readme-images/pyfun-hangman-ci-pyhton-linter2.png)
+![CI Python Linter validation2](readme-images/pyfun-hangman-ci-python-linter2.png)
 
 <br>
 <br>
