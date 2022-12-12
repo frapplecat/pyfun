@@ -405,13 +405,24 @@ with a button to take us to our deployed link.
 ![how to fork 1](readme-images/pyfun-hangman-how-to-fork1.png)
 ![how to fork 2](readme-images/pyfun-hangman-how-to-fork2.png)
 
+<br>
+<br>
+
 * Locate the relevant repository, for example: https://github.com/frapplecat/pyfun
 
 ![how to fork 3](readme-images/pyfun-hangman-how-to-fork3.png)
 
+<br>
+<br>
+
+
 * Click on the 'Fork' button in the top right corner.
 
 ![how to fork 4](readme-images/pyfun-hangman-how-to-fork4.png)
+
+<br>
+<br>
+
 
 * The forked version of this repo will be generated.
 
@@ -423,16 +434,42 @@ with a button to take us to our deployed link.
 
 # **HOW TO CLONE**
 
-![how to clone gif](#)
-
 * On GitHub.com, navigate to the main page of the repository.
-* Above the list of files, click  Code.
+![how to clone 1](readme-images/pyfunhangman-how-to-clone1.png)
+
+<br>
+<br>
+
+
+* Above the list of files, click Code.
+![how to clone 2](readme-images/pyfunhangman-how-to-clone2.png)
+
+<br>
+<br>
+
+
 * Copy the URL for the repository.
-* To clone the repository using HTTPS, under "HTTPS", click the clipboard icon for copying the URL.
+![how to clone 3](readme-images/pyfunhangman-how-to-clone3.png)
+
+<br>
+<br>
+
+
 * Open Terminal.
+![how to clone 4](readme-images/pyfunhangman-how-to-clone4.png)
+
+<br>
+<br>
+
+
 * Change the current working directory to the location where you want the cloned directory.
 * Type git clone, and then paste the URL you copied earlier.
-* $ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
+![how to clone 5](readme-images/pyfunhangman-how-to-clone5.png)
+
+<br>
+<br>
+
+
 * Press Enter to create your local clone.
 
 <br>
